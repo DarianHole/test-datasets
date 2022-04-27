@@ -1,0 +1,89 @@
+Apr-27 11:39:50.914 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /Drives/K/dhole/projects_in_prog/ncov-dehoster/main.nf -profile conda,test --illumina --directory ./ --human_ref ../partial_human_ref/partial_hg38_ref.fa.gz
+Apr-27 11:39:51.002 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.0
+Apr-27 11:39:51.043 [main] INFO  nextflow.cli.CmdRun - Launching `/Drives/K/dhole/projects_in_prog/ncov-dehoster/main.nf` [exotic_avogadro] - revision: f65e172c9e
+Apr-27 11:39:51.057 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Drives/K/dhole/projects_in_prog/ncov-dehoster/nextflow.config
+Apr-27 11:39:51.060 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Drives/K/dhole/projects_in_prog/ncov-dehoster/nextflow.config
+Apr-27 11:39:51.082 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda,test`
+Apr-27 11:39:51.965 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [test, conda, nml]
+Apr-27 11:39:52.000 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/CSCScience.ca/dhole/.nextflow/plugins
+Apr-27 11:39:52.001 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-27 11:39:52.004 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Apr-27 11:39:52.021 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-27 11:39:52.023 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-27 11:39:52.028 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-27 11:39:52.038 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-27 11:39:52.091 [main] DEBUG nextflow.Session - Session uuid: 46228af2-98e5-4f3b-be09-b776752d76ed
+Apr-27 11:39:52.091 [main] DEBUG nextflow.Session - Run name: exotic_avogadro
+Apr-27 11:39:52.092 [main] DEBUG nextflow.Session - Executor pool size: 4
+Apr-27 11:39:52.143 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.0 build 5552
+  Created: 02-05-2021 16:22 UTC (11:22 CDT)
+  System: Linux 4.15.0-167-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 28135@phac5018125.cscscience.ca [10.10.50.114]
+  CPUs: 4 - Mem: 15.5 GB (395.2 MB) - Swap: 2 GB (1.7 GB)
+Apr-27 11:39:52.191 [main] DEBUG nextflow.Session - Work-dir: /Drives/W/Projects/covid-19/nml_reads/vdd/darian/resources/test_small_indexes/test-datasets/illumina_fastq/work [nfs]
+Apr-27 11:39:52.218 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-27 11:39:52.233 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-27 11:39:52.451 [main] DEBUG nextflow.Session - Session start invoked
+Apr-27 11:39:52.904 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-27 11:39:53.937 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: removeHumanReads, generateSimpleSequencingSummary, regenerateFast5s_MM2, regenerateFast5s_NS, combineFastq, indexCompositeReference, grabCompositeIndex, fastqSizeSelection_NS, dehostBamFiles, nanostripper, combineFast5Barcodes, generateMinimap2Index, fastqDemultiplex, fastqSizeSelection_MM2, regenerateFastqFilesFlat, generateDehostedReads, compositeMappingBWA, regenerateFastqFiles, compositeMappingMM2, guppyBasecallerGPU, combineCSVs, generateCompositeReference, guppyBasecallerCPU
+Apr-27 11:39:54.062 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:smallCPU` matches label `smallCPU` for process with name illuminaDehosting:generateCompositeReference
+Apr-27 11:39:54.067 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.068 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.072 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-27 11:39:54.078 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=15.5 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Apr-27 11:39:54.144 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:indexResources` matches label `indexResources` for process with name illuminaDehosting:indexCompositeReference
+Apr-27 11:39:54.145 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.145 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:compositeMappingBWA` matches process illuminaDehosting:compositeMappingBWA
+Apr-27 11:39:54.179 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.179 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.189 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:smallCPU` matches label `smallCPU` for process with name illuminaDehosting:dehostBamFiles
+Apr-27 11:39:54.189 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.190 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.197 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:mediumMem` matches label `mediumMem` for process with name illuminaDehosting:generateDehostedReads
+Apr-27 11:39:54.198 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.198 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.202 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:smallCPU` matches label `smallCPU` for process with name illuminaDehosting:combineCSVs
+Apr-27 11:39:54.203 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-27 11:39:54.203 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-27 11:39:54.206 [main] DEBUG nextflow.Session - Ignite dataflow network (9)
+Apr-27 11:39:54.215 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:generateCompositeReference
+Apr-27 11:39:54.215 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}_001.fastq; options: [maxDepth:1]
+Apr-27 11:39:54.222 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:indexCompositeReference
+Apr-27 11:39:54.223 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:compositeMappingBWA
+Apr-27 11:39:54.223 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:dehostBamFiles
+Apr-27 11:39:54.227 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:generateDehostedReads
+Apr-27 11:39:54.228 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > illuminaDehosting:combineCSVs
+Apr-27 11:39:54.231 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Apr-27 11:39:54.231 [main] DEBUG nextflow.Session - Session await
+Apr-27 11:39:54.239 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}_001.fastq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.247 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}_001.fq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.251 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}_001.fq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.255 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}.fastq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.261 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}.fastq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.266 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}.fq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.271 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_R{1,2}.fq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.277 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_{1,2}.fastq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.282 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_{1,2}.fastq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.286 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_{1,2}.fq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.296 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*_{1,2}.fq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.301 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*pair{1,2}.fastq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.306 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*pair{1,2}.fastq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.311 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*pair{1,2}.fq; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.319 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: .**/*pair{1,2}.fq.gz; options: [maxDepth:1, syntax:glob, type:file]
+Apr-27 11:39:54.378 [Actor Thread 3] INFO  nextflow.conda.CondaCache - Creating Conda env: /Drives/K/dhole/projects_in_prog/ncov-dehoster/environments/illumina.yml [cache /Drives/W/Projects/covid-19/nml_reads/vdd/darian/resources/test_small_indexes/test-datasets/illumina_fastq/work/conda/illumina-c17698d704a0dc20694092ca45641a1d]
+Apr-27 11:43:48.221 [Actor Thread 3] DEBUG nextflow.conda.CondaCache - Conda create complete env=/Drives/K/dhole/projects_in_prog/ncov-dehoster/environments/illumina.yml path=/Drives/W/Projects/covid-19/nml_reads/vdd/darian/resources/test_small_indexes/test-datasets/illumina_fastq/work/conda/illumina-c17698d704a0dc20694092ca45641a1d
+Apr-27 11:43:48.300 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-27 11:43:48.307 [Task submitter] INFO  nextflow.Session - [45/77c01b] Submitted process > illuminaDehosting:generateCompositeReference (1)
+Apr-27 11:43:48.957 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: illuminaDehosting:generateCompositeReference (1); status: COMPLETED; exit: 0; error: -; workDir: /Drives/W/Projects/covid-19/nml_reads/vdd/darian/resources/test_small_indexes/test-datasets/illumina_fastq/work/45/77c01bf3da06f0d6404c9cd12bc91e]
+Apr-27 11:43:49.008 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-27 11:43:49.008 [Task submitter] INFO  nextflow.Session - [93/6bd241] Submitted process > illuminaDehosting:indexCompositeReference (1)
+Apr-27 11:43:52.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: illuminaDehosting:indexCompositeReference (1); status: COMPLETED; exit: 0; error: -; workDir: /Drives/W/Projects/covid-19/nml_reads/vdd/darian/resources/test_small_indexes/test-datasets/illumina_fastq/work/93/6bd241cd037c30706d153cd9c81194]
+Apr-27 11:43:52.585 [main] DEBUG nextflow.Session - Session await > all process finished
+Apr-27 11:43:52.588 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-27 11:43:52.594 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=4.1s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
+Apr-27 11:43:52.720 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Apr-27 11:43:52.754 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
